@@ -49,7 +49,7 @@ open class MelodeonHeaderCell: UITableViewHeaderFooterView {
     }
 
     open func setupViews() {
-        //contentView.backgroundColor = .white
+        contentView.backgroundColor = .white
         clipsToBounds = true
         addSubview(self.separator)
         separator.leftAnchor.constraint(equalTo: leftAnchor).isActive = true

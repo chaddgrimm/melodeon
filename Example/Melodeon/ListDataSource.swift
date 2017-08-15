@@ -46,7 +46,7 @@ class ListDataSource: MelodeonDataSource {
     }
 
     override var sections:[Any] {
-        return ["List A", "List D", "List B", "List E", "List C"]
+        return ["List A", "List B", "List C", "List D", "List E"]
     }
 
     override func title(forIndexPath indexPath: IndexPath) -> String {
@@ -69,6 +69,5 @@ class ListDataSource: MelodeonDataSource {
     override var headerClasses:[MelodeonHeaderCell.Type]? {
         return [TableHeaderCell.self]
     }
-
 
 }

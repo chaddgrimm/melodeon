@@ -22,7 +22,6 @@ class TableViewController: MelodeonController {
         self.dataSource = ListDataSource()
         self.removeTrailingCells = true
 
-
     }
 
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {

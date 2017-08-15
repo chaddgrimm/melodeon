@@ -191,8 +191,8 @@
 		B05F860B777E429F2294F2F0C5AECC69 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				76EFB0721F41F678006C527E /* MelodeonDataSource.swift */,
 				76EFB0711F41F678006C527E /* MelodeonHeaderCell.swift */,
+				76EFB0721F41F678006C527E /* MelodeonDataSource.swift */,
 				76EFB0701F41F678006C527E /* MelodeonController.swift */,
 			);
 			path = Classes;
