@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
 
   s.description      = 'A subclassable of table view controller which behaves like a melodeon, subclassed from UITableViewController.'
 
-  s.homepage         = 'https://github.com/chaddgrimm/Melodeon'
+  s.homepage         = 'https://github.com/chaddgrimm/melodeon'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'Apache 2.0', :file => 'LICENSE' }
   s.author           = { 'chaddgrimm' => 'chaddgrimm@gmail.com' }
-  s.source           = { :git => 'https://github.com/chaddgrimm/Melodeon.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/chaddgrimm/melodeon.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/chaddgrimm'
 
   s.ios.deployment_target = '9.0'

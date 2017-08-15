@@ -2,10 +2,10 @@
 
 A subclass of UITableViewController which behaves like a melodeon.
 
-[![CI Status](http://img.shields.io/travis/chaddgrimm/Melodeon.svg?style=flat)](https://travis-ci.org/chaddgrimm/Melodeon)
-[![Version](https://img.shields.io/cocoapods/v/Melodeon.svg?style=flat)](http://cocoapods.org/pods/Melodeon)
-[![License](https://img.shields.io/cocoapods/l/Melodeon.svg?style=flat)](http://cocoapods.org/pods/Melodeon)
-[![Platform](https://img.shields.io/cocoapods/p/Melodeon.svg?style=flat)](http://cocoapods.org/pods/Melodeon)
+[![CI Status](http://img.shields.io/travis/chaddgrimm/melodeon.svg?style=flat)](https://travis-ci.org/chaddgrimm/melodeon)
+[![Version](https://img.shields.io/cocoapods/v/Melodeon.svg?style=flat)](http://cocoapods.org/pods/melodeon)
+[![License](https://img.shields.io/cocoapods/l/Melodeon.svg?style=flat)](http://cocoapods.org/pods/melodeon)
+[![Platform](https://img.shields.io/cocoapods/p/Melodeon.svg?style=flat)](http://cocoapods.org/pods/melodeon)
 
 ## Example
 
