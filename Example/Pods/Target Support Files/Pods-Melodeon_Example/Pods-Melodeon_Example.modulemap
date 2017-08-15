@@ -1,0 +1,6 @@
+framework module Pods_Melodeon_Example {
+  umbrella header "Pods-Melodeon_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - Melodeon (0.1.0)
+
+DEPENDENCIES:
+  - Melodeon (from `../`)
+
+EXTERNAL SOURCES:
+  Melodeon:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Melodeon: de20572469cd39149a2d935634138d46b6fdf73e
+
+PODFILE CHECKSUM: 51f888903967c528ed096f7c038d00736a055a5b
+
+COCOAPODS: 1.2.1

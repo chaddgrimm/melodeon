@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Melodeon_Example' do
+  pod 'Melodeon', :path => '../'
+
+  target 'Melodeon_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,6 @@
+framework module Melodeon {
+  umbrella header "Melodeon-umbrella.h"
+
+  export *
+  module * { export * }
+}
