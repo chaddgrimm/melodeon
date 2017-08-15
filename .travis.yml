@@ -12,7 +12,8 @@ osx_image: xcode8.2
 # - pod install --project-directory=Example
 script:
 # - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/Melodeon.xcworkspace -scheme Melodeon-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
-- xcodebuild -scheme Melodeon-Example -workspace Example/Melodeon.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.2' build test
+ - xcodebuild -scheme Melodeon-Example -workspace Example/Melodeon.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.2' -enableCodeCoverage YES build test 
+
 #- pod lib lint
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -cF ios -J Melodeon-Example
