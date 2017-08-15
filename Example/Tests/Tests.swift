@@ -4,9 +4,14 @@ import Melodeon
 
 class Tests: XCTestCase {
     
+    var tableViewController:MelodeonController!
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.tableViewController = MelodeonController()
+        self.tableViewController.dataSource = MockDataSource()
+
     }
     
     override func tearDown() {
@@ -17,6 +22,10 @@ class Tests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
+    }
+
+    func testSectionCount() {
+        XCTAssert(self.tableViewController.numberOfSections(in: self.tableViewController.tableView) > 0, "Section count is zero.")
     }
     
     func testPerformanceExample() {

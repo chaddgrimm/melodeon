@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0818EEC7F6DE01E74DA69884213F1BAF /* MelodeonHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E4C413177B69AD0896B639D3FBC5AB /* MelodeonHeaderCell.swift */; };
+		09D13C7B681535D00A8A74386CEF8F57 /* Pods-Melodeon_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC53405155C064FA62321C30201E6593 /* Pods-Melodeon_Tests-dummy.m */; };
+		10187566A8906F329D2FB6F7FBE81688 /* Melodeon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B14904DDB59C6702D4FD9024C8642945 /* Melodeon-dummy.m */; };
+		17316DB7FAE7A1609621F0E336F5FA64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		2BAE702A735D452DA36A3FF0B9A7A2E6 /* Pods-Melodeon_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B688C060CE26092F2800FD66F782F2EA /* Pods-Melodeon_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4448E854519FFD28A65D284A7400C903 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4F2AAD1776C878FA7BDC2EEFFC0310B0 /* Pods-Melodeon_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC53405155C064FA62321C30201E6593 /* Pods-Melodeon_Tests-dummy.m */; };
-		65D01EDE305479B6B8C018BA6C985C19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		76EFB0731F41F678006C527E /* MelodeonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EFB0701F41F678006C527E /* MelodeonController.swift */; };
-		76EFB0741F41F678006C527E /* MelodeonHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EFB0711F41F678006C527E /* MelodeonHeaderCell.swift */; };
-		76EFB0751F41F678006C527E /* MelodeonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EFB0721F41F678006C527E /* MelodeonDataSource.swift */; };
+		4D9F7113018753C73C1BE6A10CF19D20 /* Pods-Melodeon_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B35A2412362B7178EBF07C01BB45D091 /* Pods-Melodeon_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5716A4626FBAAFD65F5F9BA4CF99C848 /* MelodeonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69BEE7B66AC8CE5A16C810A5267AD6 /* MelodeonDataSource.swift */; };
+		628FC4541088680B55FB46306FBB64E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		ADB15DE0C02019D261EFA25CED001A57 /* MelodeonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DEB0A5634A8164DA03F7B3123884A0 /* MelodeonController.swift */; };
 		BE38B74C3A0C805BD2DD7916E5E492CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		BE43F38605FEB2B3330422BCDD41C8DF /* Melodeon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B14904DDB59C6702D4FD9024C8642945 /* Melodeon-dummy.m */; };
-		C358829E64D6BE09BC383DBC0A11584A /* Melodeon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6856D4814423B27C217AA4948D1DCA1B /* Melodeon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4AAB1D6B56E65ACBAF2F0C8C990EFCD /* Pods-Melodeon_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 151782ABDD69E6680A2AAFB2B13E0ADB /* Pods-Melodeon_Example-dummy.m */; };
-		FF6E9ADBF0B4B6026A3D3359BB40FB87 /* Pods-Melodeon_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B35A2412362B7178EBF07C01BB45D091 /* Pods-Melodeon_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB79CC6899AC0CD9F1CA37AE9A3921D1 /* Melodeon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6856D4814423B27C217AA4948D1DCA1B /* Melodeon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,17 +26,24 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 89A4F26E0474F89357FEE043BF007663;
+			remoteGlobalIDString = 61E9D11F41CD06D06469060E1F326E76;
+			remoteInfo = Melodeon;
+		};
+		77E074EE2C4D8619A09CAF5320D0A26E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61E9D11F41CD06D06469060E1F326E76;
 			remoteInfo = Melodeon;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06A33A1B90F5E72D6E7FE6A7ACEB7E37 /* Melodeon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Melodeon.modulemap; sourceTree = "<group>"; };
+		06A33A1B90F5E72D6E7FE6A7ACEB7E37 /* Melodeon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Melodeon.modulemap; sourceTree = "<group>"; };
 		11DCB20B5FD1B7F5379A05C37DC76A48 /* Melodeon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Melodeon.xcconfig; sourceTree = "<group>"; };
-		139B573542DE9F1F8A8FDD9F5E09C8BC /* Pods_Melodeon_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Melodeon_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		139B573542DE9F1F8A8FDD9F5E09C8BC /* Pods_Melodeon_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Melodeon_Example.framework; path = "Pods-Melodeon_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		151782ABDD69E6680A2AAFB2B13E0ADB /* Pods-Melodeon_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Melodeon_Example-dummy.m"; sourceTree = "<group>"; };
-		256C56C50FAE87E9AC82ED43BA0C1A6E /* Pods-Melodeon_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Melodeon_Tests.modulemap"; sourceTree = "<group>"; };
+		256C56C50FAE87E9AC82ED43BA0C1A6E /* Pods-Melodeon_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Melodeon_Tests.modulemap"; sourceTree = "<group>"; };
 		2BF08E43C33A7276E1575DF01F09B993 /* Pods-Melodeon_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Melodeon_Example-frameworks.sh"; sourceTree = "<group>"; };
 		2C8642CF5172BAAE2171BC9BEF92F917 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3515A67A4AE52E2081FE82AA778FE356 /* Melodeon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Melodeon-prefix.pch"; sourceTree = "<group>"; };
@@ -48,32 +55,32 @@
 		58BD02BA4FEB4334D826909FB72B9F61 /* Pods-Melodeon_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Melodeon_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6856D4814423B27C217AA4948D1DCA1B /* Melodeon-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Melodeon-umbrella.h"; sourceTree = "<group>"; };
-		76EFB0701F41F678006C527E /* MelodeonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MelodeonController.swift; sourceTree = "<group>"; };
-		76EFB0711F41F678006C527E /* MelodeonHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MelodeonHeaderCell.swift; sourceTree = "<group>"; };
-		76EFB0721F41F678006C527E /* MelodeonDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MelodeonDataSource.swift; sourceTree = "<group>"; };
-		77EB4DADD3150DF08BC3531BF2DDB584 /* Pods_Melodeon_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Melodeon_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		77E4C413177B69AD0896B639D3FBC5AB /* MelodeonHeaderCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MelodeonHeaderCell.swift; sourceTree = "<group>"; };
+		77EB4DADD3150DF08BC3531BF2DDB584 /* Pods_Melodeon_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Melodeon_Tests.framework; path = "Pods-Melodeon_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DEB0A5634A8164DA03F7B3123884A0 /* MelodeonController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MelodeonController.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96011BF1D4A79D86F5B3B4AC452FDE00 /* Pods-Melodeon_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Melodeon_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		9C69BEE7B66AC8CE5A16C810A5267AD6 /* MelodeonDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MelodeonDataSource.swift; sourceTree = "<group>"; };
 		A32ADA0AA27B4DE9342781EC628F1FFC /* Pods-Melodeon_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Melodeon_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B14904DDB59C6702D4FD9024C8642945 /* Melodeon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Melodeon-dummy.m"; sourceTree = "<group>"; };
 		B35A2412362B7178EBF07C01BB45D091 /* Pods-Melodeon_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Melodeon_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B688C060CE26092F2800FD66F782F2EA /* Pods-Melodeon_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Melodeon_Example-umbrella.h"; sourceTree = "<group>"; };
-		BCD241F8BD7208152E6D982EEB38B044 /* Pods-Melodeon_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Melodeon_Example.modulemap"; sourceTree = "<group>"; };
+		BCD241F8BD7208152E6D982EEB38B044 /* Pods-Melodeon_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Melodeon_Example.modulemap"; sourceTree = "<group>"; };
 		DB7A7F804F58254D2AE776AB1B89CFE0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFBE4CAAAA18A0FB5717161A3A33029E /* Pods-Melodeon_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Melodeon_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E33A04C6A53F4BAE654D6EA2AE1ABD7F /* Pods-Melodeon_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Melodeon_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EC53405155C064FA62321C30201E6593 /* Pods-Melodeon_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Melodeon_Tests-dummy.m"; sourceTree = "<group>"; };
-		ED574995C3752CA02FD0D400C018E0BA /* Melodeon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Melodeon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED574995C3752CA02FD0D400C018E0BA /* Melodeon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Melodeon.framework; path = Melodeon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5057BFAE93F54F9B70FFE9CAC82F4A8 /* Pods-Melodeon_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Melodeon_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F51B22F672A6DC57B1B8C7458B539CC9 /* Pods-Melodeon_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Melodeon_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9C28B4D7D190C0EDED9B46FB81B4115A /* Frameworks */ = {
+		08F56476B1F139F44D985F9C80A0B02E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4448E854519FFD28A65D284A7400C903 /* Foundation.framework in Frameworks */,
+				17316DB7FAE7A1609621F0E336F5FA64 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,11 +92,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF5F08565A174BF85F44E614A745C706 /* Frameworks */ = {
+		B584DA6D5CFA92916A128E1EB90BAED8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D01EDE305479B6B8C018BA6C985C19 /* Foundation.framework in Frameworks */,
+				628FC4541088680B55FB46306FBB64E9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,12 +120,15 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		24D095477430999DB739A58BA99ECCA2 /* Melodeon */ = {
+		3AEED390869857F6694462938885E66E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B05F860B777E429F2294F2F0C5AECC69 /* Classes */,
+				81DEB0A5634A8164DA03F7B3123884A0 /* MelodeonController.swift */,
+				9C69BEE7B66AC8CE5A16C810A5267AD6 /* MelodeonDataSource.swift */,
+				77E4C413177B69AD0896B639D3FBC5AB /* MelodeonHeaderCell.swift */,
 			);
-			path = Melodeon;
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		4110D8DB4AA0661685773A6131E982B3 /* Products */ = {
@@ -152,7 +162,7 @@
 		78F71F7D1BC464AA5B90C2BC9E5725CB /* Melodeon */ = {
 			isa = PBXGroup;
 			children = (
-				24D095477430999DB739A58BA99ECCA2 /* Melodeon */,
+				D2FF432E2EA6BC17F280028B63569A36 /* Melodeon */,
 				CCB0097139D264310D8134023BAB1AA8 /* Support Files */,
 			);
 			name = Melodeon;
@@ -188,16 +198,6 @@
 			path = "Target Support Files/Pods-Melodeon_Tests";
 			sourceTree = "<group>";
 		};
-		B05F860B777E429F2294F2F0C5AECC69 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				76EFB0711F41F678006C527E /* MelodeonHeaderCell.swift */,
-				76EFB0721F41F678006C527E /* MelodeonDataSource.swift */,
-				76EFB0701F41F678006C527E /* MelodeonController.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +220,15 @@
 			path = "Example/Pods/Target Support Files/Melodeon";
 			sourceTree = "<group>";
 		};
+		D2FF432E2EA6BC17F280028B63569A36 /* Melodeon */ = {
+			isa = PBXGroup;
+			children = (
+				3AEED390869857F6694462938885E66E /* Classes */,
+			);
+			name = Melodeon;
+			path = Melodeon;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,11 +240,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		39ABFB71BE0E45246D2095F3F1EEAC39 /* Headers */ = {
+		9D237D719CBBA3B82A1EF1554A1A8B5C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C358829E64D6BE09BC383DBC0A11584A /* Melodeon-umbrella.h in Headers */,
+				FB79CC6899AC0CD9F1CA37AE9A3921D1 /* Melodeon-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,41 +256,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E423B926A09BBE4DE30349EBCDD0E89D /* Headers */ = {
+		FA338CAB274D09E994DC7AE78A6934C7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF6E9ADBF0B4B6026A3D3359BB40FB87 /* Pods-Melodeon_Tests-umbrella.h in Headers */,
+				4D9F7113018753C73C1BE6A10CF19D20 /* Pods-Melodeon_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		06D480387743D067C535FB4A86A404C5 /* Pods-Melodeon_Tests */ = {
+		61E9D11F41CD06D06469060E1F326E76 /* Melodeon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1328D0A607ECCA0245C04DE69CD8370D /* Build configuration list for PBXNativeTarget "Pods-Melodeon_Tests" */;
+			buildConfigurationList = 3CDAD11ED200AADAB07635728A0EAB52 /* Build configuration list for PBXNativeTarget "Melodeon" */;
 			buildPhases = (
-				F87614843AC99EAA0D7EB1771E69C6BA /* Sources */,
-				9C28B4D7D190C0EDED9B46FB81B4115A /* Frameworks */,
-				E423B926A09BBE4DE30349EBCDD0E89D /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-Melodeon_Tests";
-			productName = "Pods-Melodeon_Tests";
-			productReference = 77EB4DADD3150DF08BC3531BF2DDB584 /* Pods_Melodeon_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		89A4F26E0474F89357FEE043BF007663 /* Melodeon */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 31CDC9F16B271290176369059D020264 /* Build configuration list for PBXNativeTarget "Melodeon" */;
-			buildPhases = (
-				82609BC589A22BA1B412D3F9E7B1250A /* Sources */,
-				BF5F08565A174BF85F44E614A745C706 /* Frameworks */,
-				39ABFB71BE0E45246D2095F3F1EEAC39 /* Headers */,
+				2C001CA94376AB31FA2089427EFBCA4F /* Sources */,
+				08F56476B1F139F44D985F9C80A0B02E /* Frameworks */,
+				9D237D719CBBA3B82A1EF1554A1A8B5C /* Headers */,
 			);
 			buildRules = (
 			);
@@ -290,6 +282,24 @@
 			name = Melodeon;
 			productName = Melodeon;
 			productReference = ED574995C3752CA02FD0D400C018E0BA /* Melodeon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6F50DD62A6E9CAC353B941980D39D97A /* Pods-Melodeon_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC60380A51F1886FBCF9701DEED3D3A6 /* Build configuration list for PBXNativeTarget "Pods-Melodeon_Tests" */;
+			buildPhases = (
+				CF36D58BE689F792EC83217FD3EA9533 /* Sources */,
+				B584DA6D5CFA92916A128E1EB90BAED8 /* Frameworks */,
+				FA338CAB274D09E994DC7AE78A6934C7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE32069384A02BBE7F04BF8657D2EE84 /* PBXTargetDependency */,
+			);
+			name = "Pods-Melodeon_Tests";
+			productName = "Pods-Melodeon_Tests";
+			productReference = 77EB4DADD3150DF08BC3531BF2DDB584 /* Pods_Melodeon_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		938779B7B7F10E287C482D7BDADBBB38 /* Pods-Melodeon_Example */ = {
@@ -331,22 +341,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				89A4F26E0474F89357FEE043BF007663 /* Melodeon */,
+				61E9D11F41CD06D06469060E1F326E76 /* Melodeon */,
 				938779B7B7F10E287C482D7BDADBBB38 /* Pods-Melodeon_Example */,
-				06D480387743D067C535FB4A86A404C5 /* Pods-Melodeon_Tests */,
+				6F50DD62A6E9CAC353B941980D39D97A /* Pods-Melodeon_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		82609BC589A22BA1B412D3F9E7B1250A /* Sources */ = {
+		2C001CA94376AB31FA2089427EFBCA4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE43F38605FEB2B3330422BCDD41C8DF /* Melodeon-dummy.m in Sources */,
-				76EFB0731F41F678006C527E /* MelodeonController.swift in Sources */,
-				76EFB0751F41F678006C527E /* MelodeonDataSource.swift in Sources */,
-				76EFB0741F41F678006C527E /* MelodeonHeaderCell.swift in Sources */,
+				10187566A8906F329D2FB6F7FBE81688 /* Melodeon-dummy.m in Sources */,
+				ADB15DE0C02019D261EFA25CED001A57 /* MelodeonController.swift in Sources */,
+				5716A4626FBAAFD65F5F9BA4CF99C848 /* MelodeonDataSource.swift in Sources */,
+				0818EEC7F6DE01E74DA69884213F1BAF /* MelodeonHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,11 +368,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F87614843AC99EAA0D7EB1771E69C6BA /* Sources */ = {
+		CF36D58BE689F792EC83217FD3EA9533 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F2AAD1776C878FA7BDC2EEFFC0310B0 /* Pods-Melodeon_Tests-dummy.m in Sources */,
+				09D13C7B681535D00A8A74386CEF8F57 /* Pods-Melodeon_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,13 +382,57 @@
 		DD7C3295A35EC2BF9F504C1B8A7C0E04 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Melodeon;
-			target = 89A4F26E0474F89357FEE043BF007663 /* Melodeon */;
+			target = 61E9D11F41CD06D06469060E1F326E76 /* Melodeon */;
 			targetProxy = 61EEE8AE9CBE35A5E681A77D7C0B336D /* PBXContainerItemProxy */;
+		};
+		EE32069384A02BBE7F04BF8657D2EE84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Melodeon;
+			target = 61E9D11F41CD06D06469060E1F326E76 /* Melodeon */;
+			targetProxy = 77E074EE2C4D8619A09CAF5320D0A26E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0DC6E5C5F8DCAE94D08D016C88BE5CE5 /* Debug */ = {
+		053955503445F335B933439B89BB9548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5057BFAE93F54F9B70FFE9CAC82F4A8 /* Pods-Melodeon_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Melodeon_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Melodeon_Example/Pods-Melodeon_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Melodeon_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		19F70C51373B47C690F31CED03B3BE4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 11DCB20B5FD1B7F5379A05C37DC76A48 /* Melodeon.xcconfig */;
 			buildSettings = {
@@ -387,7 +441,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -400,20 +454,57 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Melodeon/Melodeon.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Melodeon;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+		3564705B084926A8C30C577F15212A3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58BD02BA4FEB4334D826909FB72B9F61 /* Pods-Melodeon_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Melodeon_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Melodeon_Tests/Pods-Melodeon_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Melodeon_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -453,7 +544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -461,7 +552,81 @@
 			};
 			name = Debug;
 		};
-		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+		83D91FA979081CE092E9269312072971 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49C6BAE7457321E2B277E958B6765C2E /* Pods-Melodeon_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Melodeon_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Melodeon_Example/Pods-Melodeon_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Melodeon_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DAB898817AB1C972A386931B2740242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11DCB20B5FD1B7F5379A05C37DC76A48 /* Melodeon.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Melodeon/Melodeon-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Melodeon/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Melodeon/Melodeon.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Melodeon;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -497,7 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
@@ -505,154 +670,7 @@
 			};
 			name = Release;
 		};
-		878FE2D3EB1F943AC722D0A1E4A54352 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11DCB20B5FD1B7F5379A05C37DC76A48 /* Melodeon.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Melodeon/Melodeon-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Melodeon/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Melodeon/Melodeon.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Melodeon;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D0798586D1677F5B9F08CD6E3504D152 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49C6BAE7457321E2B277E958B6765C2E /* Pods-Melodeon_Example.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Melodeon_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Melodeon_Example/Pods-Melodeon_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Melodeon_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E51339D5717015C968D0161D8B69FD73 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5057BFAE93F54F9B70FFE9CAC82F4A8 /* Pods-Melodeon_Example.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Melodeon_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Melodeon_Example/Pods-Melodeon_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Melodeon_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E64926D78A8CC4C58DA5E8CCB0FF6B72 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58BD02BA4FEB4334D826909FB72B9F61 /* Pods-Melodeon_Tests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Melodeon_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Melodeon_Tests/Pods-Melodeon_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Melodeon_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FF337B7D0BFD21164259E0D49D3FC0BD /* Debug */ = {
+		E30580A9611A05DB23A111CC24DB8C5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DFBE4CAAAA18A0FB5717161A3A33029E /* Pods-Melodeon_Tests.debug.xcconfig */;
 			buildSettings = {
@@ -670,7 +688,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Melodeon_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Melodeon_Tests/Pods-Melodeon_Tests.modulemap";
@@ -682,6 +700,9 @@
 				PRODUCT_NAME = Pods_Melodeon_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -691,20 +712,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1328D0A607ECCA0245C04DE69CD8370D /* Build configuration list for PBXNativeTarget "Pods-Melodeon_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FF337B7D0BFD21164259E0D49D3FC0BD /* Debug */,
-				E64926D78A8CC4C58DA5E8CCB0FF6B72 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2445EBA758086216AEE00A6FBEFBA11D /* Build configuration list for PBXNativeTarget "Pods-Melodeon_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D0798586D1677F5B9F08CD6E3504D152 /* Debug */,
-				E51339D5717015C968D0161D8B69FD73 /* Release */,
+				83D91FA979081CE092E9269312072971 /* Debug */,
+				053955503445F335B933439B89BB9548 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -712,17 +724,26 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
-				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
+				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		31CDC9F16B271290176369059D020264 /* Build configuration list for PBXNativeTarget "Melodeon" */ = {
+		3CDAD11ED200AADAB07635728A0EAB52 /* Build configuration list for PBXNativeTarget "Melodeon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0DC6E5C5F8DCAE94D08D016C88BE5CE5 /* Debug */,
-				878FE2D3EB1F943AC722D0A1E4A54352 /* Release */,
+				8DAB898817AB1C972A386931B2740242 /* Debug */,
+				19F70C51373B47C690F31CED03B3BE4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC60380A51F1886FBCF9701DEED3D3A6 /* Build configuration list for PBXNativeTarget "Pods-Melodeon_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E30580A9611A05DB23A111CC24DB8C5D /* Debug */,
+				3564705B084926A8C30C577F15212A3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
