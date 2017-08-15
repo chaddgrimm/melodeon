@@ -2,6 +2,10 @@
 
 A subclass of UITableViewController which behaves like a melodeon.
 
+
+![Screen capture](https://thumbs.gfycat.com/BetterRepulsiveHornedviper-size_restricted.gif)
+
+
 [![CI Status](http://img.shields.io/travis/chaddgrimm/melodeon.svg?style=flat)](https://travis-ci.org/chaddgrimm/melodeon)
 [![codecov.io](https://codecov.io/gh/chaddgrimm/melodeon/branch/master/graphs/badge.svg)](https://codecov.io/gh/chaddgrimm/melodeon/branch/master)
 [![Version](https://img.shields.io/cocoapods/v/Melodeon.svg?style=flat)](http://cocoapods.org/pods/melodeon)
