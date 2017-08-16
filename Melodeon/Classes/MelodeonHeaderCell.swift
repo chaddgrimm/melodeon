@@ -28,7 +28,7 @@ open class MelodeonHeaderCell: UITableViewHeaderFooterView {
         }
     }
 
-    public var headerTapped:((_ section: Int) -> Void)?
+    var headerTapped:((_ section: Int) -> Void)?
     private var tapGestureRecognizer:UITapGestureRecognizer!
 
     public var section = -1

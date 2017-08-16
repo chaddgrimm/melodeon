@@ -21,18 +21,9 @@ open class MelodeonDataSource: NSObject {
     // Set all state to collapse, set all to true.
     // If the initial expanded section is defined we set it to false.
     private func loadDefaultState() {
-        for index in 0..<sections.count {
-            if index == self.initialExpandedSection {
-                sectionIsCollapsed.append(false)
-            } else {
-                sectionIsCollapsed.append(true)
-            }
+        for _ in 0..<sections.count {
+            sectionIsCollapsed.append(true)
         }
-    }
-
-    // Override to provide the index of the section you want to be expanded by default.
-    open var initialExpandedSection:Int {
-        return -1
     }
 
     // Override to provide the section's labels and to get the total number of sections.
@@ -45,20 +36,10 @@ open class MelodeonDataSource: NSObject {
         return []
     }
 
-    // Override to supply the header height of a specific section.
-    // Default is 44.0 from MelodeonHeaderCell.defaultHeight
-    open func headerHeight(forSection section: Int) -> CGFloat {
-        return MelodeonHeaderCell.defaultHeight
-    }
-
     // Override to provide the title of each cells if you're using the default UITableViewCell class.
-    open func title(forIndexPath indexPath: IndexPath) -> String {
+    // else, you can just use the default tableView(tableView:cellForRowAt:)
+    open func cellTitle(forIndexPath indexPath: IndexPath) -> String {
         return "Cell \(indexPath.row)"
-    }
-
-    // Override to give the total number of rows for each section.
-    open func numberOfRowsInSection(_ section:Int) -> Int {
-        return 0
     }
 
     // Convenience property that returns which section is currently expanded. (Internal use only)
