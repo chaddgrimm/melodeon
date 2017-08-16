@@ -24,10 +24,70 @@ class TableViewController: MelodeonController {
                             UIColor(red: 76/255, green: 177/255, blue: 210/255, alpha: 1.0),
                             UIColor(red: 253/255, green: 179/255, blue: 235/255, alpha: 1.0)]
 
+    override var sections:[Any] {
+        return ["List A", "List B", "List C", "List D", "List E"]
+    }
+
+    override var headerClasses:[MelodeonHeaderCell.Type]? {
+        return [TableHeaderCell.self]
+    }
+
+    override var initialExpandedSection: Int {
+        return 0
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.removeTrailingCells = true
 
+    }
+
+    override func numberOfRows(inSection section:Int) -> Int {
+        switch section {
+        case 0:
+            return firstList.count
+        case 1:
+            return secondList.count
+        case 2:
+            return thirdList.count
+        case 3:
+            return fourthList.count
+        case 4:
+            return fifthList.count
+        default:
+            return 0
+        }
+    }
+
+    override func header(_ header: MelodeonHeaderCell, shouldTapAtSection section: Int) -> Bool {
+        print("Section \(section) is ewan.")
+        // Disable tap event on the first section
+        if section == 0 {
+            
+            return false
+        }
+        return true
+    }
+
+    override func header(_ header: MelodeonHeaderCell, didTapAtSection section: Int) {
+        print("Header at section \(section) \(header.isCollapsed ? "is collapsed" : "is expanded").")
+    }
+
+    override func cellTitle(forIndexPath indexPath: IndexPath) -> String {
+        switch indexPath.section {
+        case 0:
+            return firstList[indexPath.item]
+        case 1:
+            return secondList[indexPath.item]
+        case 2:
+            return thirdList[indexPath.item]
+        case 3:
+            return fourthList[indexPath.item]
+        case 4:
+            return fifthList[indexPath.item]
+        default:
+            return super.cellTitle(forIndexPath: indexPath)
+        }
     }
 
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -49,52 +109,11 @@ class TableViewController: MelodeonController {
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-
+        
         let scale = (40 * ((CGFloat(section) + 0.30)/2))
         let height = super.tableView(tableView, heightForHeaderInSection: section)
 
         return height + scale
-    }
-
-
-    override func numberOfRows(inSection section:Int) -> Int {
-        switch section {
-        case 0:
-            return firstList.count
-        case 1:
-            return secondList.count
-        case 2:
-            return thirdList.count
-        case 3:
-            return fourthList.count
-        case 4:
-            return fifthList.count
-        default:
-            return 0
-        }
-    }
-
-    override func header(_ header: MelodeonHeaderCell, shouldTapAtSection section: Int) -> Bool {
-        if section == 0 {
-            return false
-        }
-        return true
-    }
-
-    override func header(_ header: MelodeonHeaderCell, didTapAtSection section: Int) {
-        print("is collapsed: \(header.isCollapsed) at section \(section)")
-    }
-
-    override var sections:[Any] {
-        return ["List A", "List B", "List C", "List D", "List E"]
-    }
-
-    override var headerClasses:[MelodeonHeaderCell.Type]? {
-        return [TableHeaderCell.self]
-    }
-
-    override var initialExpandedSection: Int {
-        return 0
     }
 
 }
