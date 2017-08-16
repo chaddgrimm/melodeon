@@ -24,7 +24,8 @@ class Tests: XCTestCase {
     }
 
     func testSectionCount() {
-        XCTAssert(self.tableViewController.numberOfSections(in: self.tableViewController.tableView) > 0, "Section count is zero.")
+        let passed = self.tableViewController.sections.count == 0 && self.tableViewController.numberOfSections(in: self.tableViewController.tableView) == 0
+        XCTAssert(passed, "Section count is zero.")
     }
     
     func testPerformanceExample() {
