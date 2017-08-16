@@ -5,7 +5,7 @@
   "description": "A subclassable of table view controller which behaves like a melodeon, subclassed from UITableViewController.",
   "homepage": "https://github.com/chaddgrimm/melodeon",
   "license": {
-    "type": "Apache 2.0",
+    "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
@@ -15,7 +15,6 @@
     "git": "https://github.com/chaddgrimm/melodeon.git",
     "tag": "0.1.0"
   },
-  "social_media_url": "https://twitter.com/chaddgrimm",
   "platforms": {
     "ios": "9.0"
   },
