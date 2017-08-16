@@ -10,7 +10,6 @@ class Tests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         self.tableViewController = MelodeonController()
-        self.tableViewController.dataSource = MockDataSource()
 
     }
     

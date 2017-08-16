@@ -24,13 +24,8 @@ class TableViewController: MelodeonController {
                             UIColor(red: 76/255, green: 177/255, blue: 210/255, alpha: 1.0),
                             UIColor(red: 253/255, green: 179/255, blue: 235/255, alpha: 1.0)]
 
-    override var initialExpandedSection: Int {
-        return 0
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataSource = ListDataSource()
         self.removeTrailingCells = true
 
     }
@@ -49,6 +44,19 @@ class TableViewController: MelodeonController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected \(indexPath.item)")
+    }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+
+        let scale = (40 * ((CGFloat(section) + 0.30)/2))
+        let height = super.tableView(tableView, heightForHeaderInSection: section)
+
+        return height + scale
+    }
+
+
     override func numberOfRows(inSection section:Int) -> Int {
         switch section {
         case 0:
@@ -66,14 +74,6 @@ class TableViewController: MelodeonController {
         }
     }
 
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-
-        let scale = (40 * ((CGFloat(section) + 0.30)/2))
-        let height = super.tableView(tableView, heightForHeaderInSection: section)
-
-        return height + scale
-    }
-
     override func header(_ header: MelodeonHeaderCell, shouldTapAtSection section: Int) -> Bool {
         if section == 0 {
             return false
@@ -85,8 +85,16 @@ class TableViewController: MelodeonController {
         print("is collapsed: \(header.isCollapsed) at section \(section)")
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected \(indexPath.item)")
+    override var sections:[Any] {
+        return ["List A", "List B", "List C", "List D", "List E"]
+    }
+
+    override var headerClasses:[MelodeonHeaderCell.Type]? {
+        return [TableHeaderCell.self]
+    }
+
+    override var initialExpandedSection: Int {
+        return 0
     }
 
 }

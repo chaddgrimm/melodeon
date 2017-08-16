@@ -17,6 +17,19 @@ protocol MelodeonDelegate: class {
 
 open class MelodeonController: UITableViewController, MelodeonDelegate {
 
+    // An array reference to sections current state (collapsed is true, expanded is false).
+    private var sectionIsCollapsed:[Bool] = []
+
+    // Override to return the header classes you want to use here.
+    open var headerClasses:[MelodeonHeaderCell.Type]? {
+        return []
+    }
+
+    // Override to provide the section's labels and to get the total number of sections.
+    open var sections:[Any] {
+        return []
+    }
+
     // Override to provide the index of the section you want to be expanded by default.
     open var initialExpandedSection:Int {
         return -1
@@ -24,23 +37,6 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
 
     private weak var delegate:MelodeonDelegate?
 
-    // Identify if an initial section needs to be expanded on view load
-    // and register all header classes whenever a datasource instanced is assigned
-    // this will then reload the table view
-    open var dataSource: MelodeonDataSource? {
-        didSet {
-            if let dataSource = self.dataSource, self.initialExpandedSection > -1 && self.initialExpandedSection < dataSource.sections.count {
-                dataSource.toggleCollapse(forSection:self.initialExpandedSection, collapsed:false)
-            }
-
-            if let headerClasses = dataSource?.headerClasses {
-                for headerClass in headerClasses {
-                    tableView?.register(headerClass, forHeaderFooterViewReuseIdentifier: NSStringFromClass(headerClass))
-                }
-            }
-            tableView.reloadData()
-        }
-    }
 
     // Set to true if you want to hide the excess separators on empty cells.
     open var removeTrailingCells:Bool = false {
@@ -53,23 +49,46 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
         }
     }
 
+    private func registerClasses() {
+        if self.initialExpandedSection > -1 && self.initialExpandedSection < self.sections.count {
+            self.toggleCollapse(forSection:self.initialExpandedSection, collapsed:false)
+        }
+
+        if let headerClasses = self.headerClasses {
+            for headerClass in headerClasses {
+                tableView?.register(headerClass, forHeaderFooterViewReuseIdentifier: NSStringFromClass(headerClass))
+            }
+        }
+        tableView.reloadData()
+    }
+
     override open func viewDidLoad() {
         super.viewDidLoad()
-        // Register our the default Header
-        tableView.register(MelodeonHeaderCell.self, forHeaderFooterViewReuseIdentifier: NSStringFromClass(MelodeonHeaderCell.self))
+        for _ in 0..<sections.count {
+            sectionIsCollapsed.append(true)
+        }
         self.delegate = self
+        // Register our the default Header
+        self.registerClasses()
+        //tableView.register(MelodeonHeaderCell.self, forHeaderFooterViewReuseIdentifier: NSStringFromClass(MelodeonHeaderCell.self))
+
+
+
     }
 
     final override public func numberOfSections(in tableView: UITableView) -> Int {
-        return dataSource?.sections.count ?? 0
+        return self.sections.count ?? 0
     }
 
     // Do not override use numberOfRows(inSection:) instead
     final override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let dataSource = self.dataSource else {
-            return 0
-        }
-        return dataSource.section(collapsedFor: section) ? 0 : self.numberOfRows(inSection:section)
+        return self.section(collapsedFor: section) ? 0 : self.numberOfRows(inSection:section)
+    }
+
+    // Override to provide the title of each cells if you're using the default UITableViewCell class.
+    // else, you can just use the default tableView(tableView:cellForRowAt:)
+    open func cellTitle(forIndexPath indexPath: IndexPath) -> String {
+        return "Cell \(indexPath.row)"
     }
 
     // Override to provide the number of rows for each section.
@@ -79,19 +98,17 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
     }
 
     final override public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let dataSource = self.dataSource else {
-            return nil
-        }
+
         let reusableView: MelodeonHeaderCell
-        if let classes = dataSource.headerClasses, classes.count > section {
+        if let classes = self.headerClasses, classes.count > section {
             reusableView = tableView.dequeueReusableHeaderFooterView(withIdentifier: NSStringFromClass(classes[section])) as! MelodeonHeaderCell
-        } else if let cls = dataSource.headerClasses?.first {
+        } else if let cls = self.headerClasses?.first {
             reusableView = tableView.dequeueReusableHeaderFooterView(withIdentifier: NSStringFromClass(cls)) as! MelodeonHeaderCell
         } else {
             reusableView = tableView.dequeueReusableHeaderFooterView(withIdentifier: NSStringFromClass(MelodeonHeaderCell.self)) as! MelodeonHeaderCell
         }
-        reusableView.item = dataSource.sections[section]
-        reusableView.collapsed = dataSource.section(collapsedFor: section)
+        reusableView.item = self.sections[section]
+        reusableView.collapsed = self.section(collapsedFor: section)
         reusableView.isInteractive = true
         reusableView.section = section
         reusableView.headerTapped = { [weak self] section in self?.headerTapped(section) }
@@ -108,7 +125,7 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
     // Default implimentation of cell views, this can be overriden if you want to supply your custom cells just like you would on a non-subclassed UITableViewController
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "\(NSStringFromClass(MelodeonController.self)).Cell"
-        let title = dataSource?.cellTitle(forIndexPath: indexPath)
+        let title = self.cellTitle(forIndexPath: indexPath)
         guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier) else {
             let cell = UITableViewCell(style: .default, reuseIdentifier: identifier)
             cell.textLabel?.text = title
@@ -135,7 +152,7 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
 
     // Check whether you want to expand or collapse the header whenever it is tapped.
     private func headerTapped(_ section:Int) {
-        guard let sectionHeader = self.tableView.headerView(forSection: section) as? MelodeonHeaderCell, let dataSource = self.dataSource else {
+        guard let sectionHeader = self.tableView.headerView(forSection: section) as? MelodeonHeaderCell else {
             return
         }
 
@@ -148,7 +165,7 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
         let selected = section
 
         // Checks if there's an expanded section.
-        if let index = dataSource.expandedSection {
+        if let index = self.expandedSection {
             expanded = index
         }
 
@@ -169,7 +186,7 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
 
     // Decides if the section should be collapsed or expanded
     private func toggleHeader(section:Int, completion:(()->())? = nil) {
-        guard let sectionHeader = self.tableView.headerView(forSection: section) as? MelodeonHeaderCell, let dataSource = self.dataSource else {
+        guard let sectionHeader = self.tableView.headerView(forSection: section) as? MelodeonHeaderCell else {
             return
         }
 
@@ -191,11 +208,29 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
             } else {
                 self?.tableView.deleteRows(at: indexPaths, with: .automatic)
             }
-            dataSource.toggleCollapse(forSection: section, collapsed: !sectionIsCollapsed)
+            self?.toggleCollapse(forSection: section, collapsed: !sectionIsCollapsed)
             self?.tableView.endUpdates()
             completion?()
         }
     }
 
+
+    // Convenience property that returns which section is currently expanded. (Internal use only)
+    private var expandedSection:Int? {
+        guard let index = sectionIsCollapsed.index(where: { $0 == false }) else {
+            return nil
+        }
+        return index
+    }
+
+    // Get the status of a specific section. (Internal use only)
+    private func section(collapsedFor section: Int) -> Bool {
+        return sectionIsCollapsed[section]
+    }
+
+    // Set the collapse status of given section. (Internal use only)
+    private func toggleCollapse(forSection section: Int, collapsed:Bool) {
+        sectionIsCollapsed[section] = collapsed
+    }
 
 }
