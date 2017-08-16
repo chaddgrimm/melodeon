@@ -17,13 +17,11 @@ protocol MelodeonDelegate: class {
 
 open class MelodeonController: UITableViewController, MelodeonDelegate {
 
-    // An array reference to sections current state (collapsed is true, expanded is false).
+    // A map reference to sections current state (collapsed is true, expanded is false).
     // (Internal use only)
     private var sectionIsCollapsed:[String:Bool] = [:]
     // Private reference to our MelodeonDelegate (Internal use only)
     private var delegate:MelodeonDelegate?
-    // Convenience property that returns which section is currently expanded. (Internal use only)
-
     // Override to return the header classes you want to use here.
     open var headerClasses:[MelodeonHeaderCell.Type]? {
         return []
@@ -58,11 +56,10 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
 
         for index in 0..<sections.count {
             sectionIsCollapsed["section-\(index)"] = index != self.initialExpandedSection
-            if let tapEnabled = self.delegate?.header(MelodeonHeaderCell(), shouldTapAtSection: index), tapEnabled == false {
+            if let header = tableView(self.tableView, viewForHeaderInSection: index) as? MelodeonHeaderCell, let tapEnabled = self.delegate?.header(header, shouldTapAtSection: index), tapEnabled == false {
                 sectionIsCollapsed["section-\(index)"] = false
             }
         }
-
     }
 
     // Override to provide the title of each cells if you're using the default UITableViewCell class.
@@ -188,7 +185,6 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
             return
         }
 
-
         // Do nothing if this section doesn't respond to a tap.
         if let tapEnabled = delegate?.header(sectionHeader, shouldTapAtSection:section), tapEnabled == false {
             return
@@ -216,6 +212,5 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
     private func section(collapsedFor section: Int) -> Bool? {
         return sectionIsCollapsed["section-\(section)"]
     }
-    
-    
+
 }
