@@ -1,12 +1,11 @@
 //
-//  ViewController.swift
+//  TableViewController.swift
 //  Melodeon
 //
 //  Created by Chad Lee on 14/08/2017.
 //  Copyright © 2017 Chad Lee. All rights reserved.
 //
 
-import UIKit
 import Melodeon
 
 class TableViewController: MelodeonController {
@@ -60,10 +59,8 @@ class TableViewController: MelodeonController {
     }
 
     override func header(_ header: MelodeonHeaderCell, shouldTapAtSection section: Int) -> Bool {
-        print("Section \(section) is ewan.")
-        // Disable tap event on the first section
-        if section == 0 {
-            
+        // Disable tap event on the third section
+        if section == 2 {
             return false
         }
         return true
@@ -109,12 +106,11 @@ class TableViewController: MelodeonController {
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
+
         let scale = (40 * ((CGFloat(section) + 0.30)/2))
         let height = super.tableView(tableView, heightForHeaderInSection: section)
-
+        
         return height + scale
     }
-
+    
 }
-

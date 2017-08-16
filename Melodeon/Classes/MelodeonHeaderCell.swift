@@ -16,7 +16,7 @@ open class MelodeonHeaderCell: UITableViewHeaderFooterView {
     public var isCollapsed:Bool {
         return collapsed
     }
-    
+
     open var collapsed = true
     open var item: Any? {
         didSet {
@@ -43,7 +43,7 @@ open class MelodeonHeaderCell: UITableViewHeaderFooterView {
 
     override public init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-    
+
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(headerTapped(_:)))
         setupViews()
     }
@@ -77,5 +77,5 @@ open class MelodeonHeaderCell: UITableViewHeaderFooterView {
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(headerTapped(_:)))
         setupViews()
     }
-
+    
 }

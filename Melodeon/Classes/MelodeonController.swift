@@ -19,16 +19,10 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
 
     // An array reference to sections current state (collapsed is true, expanded is false).
     // (Internal use only)
-    private var sectionIsCollapsed:[Bool] = []
+    private var sectionIsCollapsed:[String:Bool] = [:]
     // Private reference to our MelodeonDelegate (Internal use only)
     private var delegate:MelodeonDelegate?
     // Convenience property that returns which section is currently expanded. (Internal use only)
-    private var expandedSection:Int? {
-        guard let index = sectionIsCollapsed.index(where: { $0 == false }) else {
-            return nil
-        }
-        return index
-    }
 
     // Override to return the header classes you want to use here.
     open var headerClasses:[MelodeonHeaderCell.Type]? {
@@ -58,15 +52,17 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-        for index in 0..<sections.count {
-            if index == self.initialExpandedSection {
-                sectionIsCollapsed.append(false)
-            } else {
-                sectionIsCollapsed.append(true)
-            }
-        }
+
         self.delegate = self
         self.registerClasses()
+
+        for index in 0..<sections.count {
+            sectionIsCollapsed["section-\(index)"] = index != self.initialExpandedSection
+            if let tapEnabled = self.delegate?.header(MelodeonHeaderCell(), shouldTapAtSection: index), tapEnabled == false {
+                sectionIsCollapsed["section-\(index)"] = false
+            }
+        }
+
     }
 
     // Override to provide the title of each cells if you're using the default UITableViewCell class.
@@ -78,7 +74,6 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
     // Override to provide the number of rows for each section.
     open func numberOfRows(inSection section:Int) -> Int {
         fatalError("Override this method to provide the number of row(s) of a section")
-        return 0
     }
 
     // Override to supply the header height of a specific section.
@@ -113,14 +108,17 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
 
     // The total number of section can be obtained from the sections property count. (Internal use only)
     final override public func numberOfSections(in tableView: UITableView) -> Int {
-        return self.sections.count ?? 0
+        return self.sections.count
     }
 
     // Do not override use numberOfRows(inSection:) instead. (Internal use only)
     final override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.section(collapsedFor: section) ? 0 : self.numberOfRows(inSection:section)
+        guard let isCollapsed = self.section(collapsedFor: section) else {
+            return 0
+        }
+        return isCollapsed ? 0 : self.numberOfRows(inSection:section)
     }
-    
+
     final override public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
         let reusableView: MelodeonHeaderCell
@@ -132,7 +130,9 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
             reusableView = tableView.dequeueReusableHeaderFooterView(withIdentifier: NSStringFromClass(MelodeonHeaderCell.self)) as! MelodeonHeaderCell
         }
         reusableView.item = self.sections[section]
-        reusableView.collapsed = self.section(collapsedFor: section)
+        if let isCollapsed = self.section(collapsedFor: section) {
+            reusableView.collapsed = isCollapsed
+        }
         reusableView.isInteractive = true
         reusableView.section = section
         reusableView.headerTapped = { [weak self] section in self?.headerTapped(section) }
@@ -160,15 +160,12 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
             return
         }
 
-
-
-        var expanded = section
-        let selected = section
-
-        // Checks if there's an expanded section.
-        if let index = self.expandedSection {
-            expanded = index
+        // Do nothing if this section doesn't respond to a tap.
+        if let tapEnabled = delegate?.header(sectionHeader, shouldTapAtSection:section), tapEnabled == false {
+            return
         }
+
+        let selected = section
 
         // Expand the selected section, this will also check if the section is already open.
         // If so, it will close that same section.
@@ -176,27 +173,28 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
             self?.delegate?.header(sectionHeader, didTapAtSection:selected)
         }
 
-        // Collapse or close any expanded sections, if it isn't the same as the selected section.
-        if expanded != selected {
-            self.toggleHeader(section: expanded)
+        for index in 0..<sections.count {
+            // Collapse or close any expanded sections, if it isn't the same as the selected section.
+            if let header = tableView(self.tableView, viewForHeaderInSection: index) as? MelodeonHeaderCell, let tapEnabled = delegate?.header(header, shouldTapAtSection: index), let isCollapsed = sectionIsCollapsed["section-\(index)"], index != selected, tapEnabled && !isCollapsed {
+                self.toggleHeader(section: index)
+            }
         }
 
     }
 
     // Decides if the section should be collapsed or expanded
     private func toggleHeader(section:Int, completion:(()->())? = nil) {
-        guard let sectionHeader = self.tableView.headerView(forSection: section) as? MelodeonHeaderCell else {
+        guard let sectionHeader = self.tableView.headerView(forSection: section) as? MelodeonHeaderCell, let sectionIsCollapsed = self.sectionIsCollapsed["section-\(section)"] else {
             return
         }
 
 
         // Do nothing if this section doesn't respond to a tap.
-        if let shouldTapAtSection = delegate?.header(sectionHeader, shouldTapAtSection:section), shouldTapAtSection == false {
+        if let tapEnabled = delegate?.header(sectionHeader, shouldTapAtSection:section), tapEnabled == false {
             return
         }
 
         let count = self.numberOfRows(inSection:section)
-        let sectionIsCollapsed = self.sectionIsCollapsed[section]
         let indexPaths:[IndexPath] = (0..<count).map { IndexPath(row: $0, section: section)}
         OperationQueue.main.addOperation { [weak self] in
             self?.tableView.beginUpdates()
@@ -208,16 +206,16 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
             } else {
                 self?.tableView.deleteRows(at: indexPaths, with: .automatic)
             }
-            self?.sectionIsCollapsed[section] = !sectionIsCollapsed
+            self?.sectionIsCollapsed["section-\(section)"] = !sectionIsCollapsed
             self?.tableView.endUpdates()
             completion?()
         }
     }
 
     // Get the status of a specific section. (Internal use only)
-    private func section(collapsedFor section: Int) -> Bool {
-        return sectionIsCollapsed[section]
+    private func section(collapsedFor section: Int) -> Bool? {
+        return sectionIsCollapsed["section-\(section)"]
     }
-
-
+    
+    
 }
