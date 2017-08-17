@@ -222,6 +222,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = VZZN2FJLA9;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -527,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B1F496BBD8328572B2CCC702 /* Pods-Melodeon_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = VZZN2FJLA9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -540,6 +542,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Melodeon_Example.app/Melodeon_Example";
 			};
 			name = Debug;
 		};
@@ -547,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13724DE6B3E3103C1BC60D49 /* Pods-Melodeon_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = VZZN2FJLA9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -556,6 +560,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Melodeon_Example.app/Melodeon_Example";
 			};
 			name = Release;
 		};
