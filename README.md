@@ -17,6 +17,81 @@ A subclass of UITableViewController which behaves like a melodeon.
 
 ![Screen capture](https://thumbs.gfycat.com/BetterRepulsiveHornedviper-size_restricted.gif)
 
+## Usage
+
+Inherit `MelodeonController` and implement it just like you would on a normal `UITableViewController`.
+
+```swift
+  class TableViewController: MelodeonController {
+    var firstList = ["Option One", "Option Two", "Option Three"]
+    var secondList = ["Choice One", "Choice Two", "Choice Three", "Choice Four" ]
+    var thirdList = ["Element One", "Element Two"]
+   
+    ...
+    .....
+    
+  }
+```
+
+Provide your sections as array and override the `sections` property.
+
+```swift
+  override var sections:[Any] {
+    return ["List A", "List B", "List C"]
+  }
+```
+
+And provide the number of rows per section (this is required).
+
+```swift
+  override func numberOfRows(inSection section:Int) -> Int {
+    switch section {
+    case 0:
+      return firstList.count
+    case 1:
+      return secondList.count
+    case 2:
+      return thirdList.count
+    default:
+      return 0
+    }
+  }
+  
+```
+**Optional:**
+
+You may implement your own header cell as long as it is of type `MelodeonHeaderCell`.
+
+```swift
+  override var headerClasses:[MelodeonHeaderCell.Type]? {
+    return [TableHeaderCell.self]
+  }
+```
+
+You may also provide the section which will be expanded when the view is loaded.
+
+```swift
+  override var initialExpandedSection: Int {
+    return 0
+  }
+```
+You can control which header is interactive.
+
+```swift
+  override func header(_ header: MelodeonHeaderCell, shouldTapAtSection section: Int) -> Bool {
+    if section == 1 {
+      return false
+    }
+    return true
+  }
+```
+Or handle the tap events.
+
+```swift
+  override func header(_ header: MelodeonHeaderCell, didTapAtSection section: Int) {
+    // TODO: Implement header tap event here
+  }
+```
 
 ## Example
 
