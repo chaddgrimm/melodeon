@@ -1,7 +1,7 @@
 # Melodeon
 
-[![Apps Using](https://img.shields.io/cocoapods/at/melodeon.svg?label=Apps)](http://cocoapods.org/pods/melodeon)
-[![Downloads](https://img.shields.io/cocoapods/dt/melodeon.svg?label=Downloads)](http://cocoapods.org/pods/melodeon)
+[![Apps Using](https://img.shields.io/cocoapods/at/Melodeon.svg?label=Apps)](http://cocoapods.org/pods/melodeon)
+[![Downloads](https://img.shields.io/cocoapods/dt/Melodeon.svg?label=Downloads)](http://cocoapods.org/pods/melodeon)
 [![Language](https://img.shields.io/badge/Swift-3.0.2-orange.svg?style=flat)](https://swift.org)
 
 
