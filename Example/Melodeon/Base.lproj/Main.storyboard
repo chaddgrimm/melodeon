@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Melodeon-->
         <scene sceneID="BA4-ua-GIv">
             <objects>
                 <tableViewController id="Kbd-vf-F3e" customClass="TableViewController" customModule="Melodeon_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="Kbd-vf-F3e" id="OlP-cb-kyi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="b1R-fi-JGp"/>
+                    <navigationItem key="navigationItem" title="Melodeon" id="b1R-fi-JGp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Xb-xv-uUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

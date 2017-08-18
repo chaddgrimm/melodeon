@@ -14,21 +14,22 @@ class TableViewController: MelodeonController {
     var secondList = ["Choice One", "Choice Two", "Choice Three", "Choice Four" ]
     var thirdList = ["Element One", "Element Two"]
     var fourthList = ["Item One", "Item Two", "Item Three"]
-    var fifthList = ["Subject One", "Subject Two"]
+    var fifthList = ["Child One", "Child Two", "Child Three"]
+    var sixthList = ["Subject One","Subject Two"]
 
-
-    let colors:[UIColor] = [UIColor(red: 0/255, green: 145/255, blue: 147/255, alpha: 1.0),
-                            UIColor(red: 253/255, green: 179/255, blue: 37/255, alpha: 1.0),
-                            UIColor(red: 251/255, green: 70/255, blue: 70/255, alpha: 1.0),
-                            UIColor(red: 76/255, green: 177/255, blue: 210/255, alpha: 1.0),
-                            UIColor(red: 253/255, green: 179/255, blue: 235/255, alpha: 1.0)]
+    let colors:[UIColor] = [UIColor(red: 198/255, green: 148/255, blue: 229/255, alpha: 1.0),
+                            UIColor(red: 45/255,  green: 224/255, blue: 240/255, alpha: 1.0),
+                            UIColor(red: 0/255,   green: 209/255, blue: 24/255,  alpha: 1.0),
+                            UIColor(red: 255/255, green: 217/255, blue: 46/255,  alpha: 1.0),
+                            UIColor(red: 255/255, green: 123/255, blue: 46/255,  alpha: 1.0),
+                            UIColor(red: 255/255, green: 36/255,  blue: 39/255,  alpha: 1.0)]
 
     override var sections:[Any] {
-        return ["List A", "List B", "List C", "List D", "List E"]
+        return ["List A", "List B", "List C", "List D", "List E", "List F"]
     }
 
     override var headerClasses:[MelodeonHeaderCell.Type]? {
-        return [TableHeaderCell.self]
+        return [TableHeaderCell.self, AnotherHeaderCell.self, TableHeaderCell.self, AnotherHeaderCell.self, TableHeaderCell.self, AnotherHeaderCell.self]
     }
 
     override var initialExpandedSection: Int {
@@ -53,14 +54,16 @@ class TableViewController: MelodeonController {
             return fourthList.count
         case 4:
             return fifthList.count
+        case 5:
+            return sixthList.count
         default:
             return 0
         }
     }
 
     override func header(_ header: MelodeonHeaderCell, shouldTapAtSection section: Int) -> Bool {
-        // Disable tap event on the third section
-        if section == 2 {
+        // Disable tap event on the last section
+        if section == 5 {
             return false
         }
         return true
@@ -82,6 +85,8 @@ class TableViewController: MelodeonController {
             return fourthList[indexPath.item]
         case 4:
             return fifthList[indexPath.item]
+        case 5:
+            return sixthList[indexPath.item]
         default:
             return super.cellTitle(forIndexPath: indexPath)
         }
@@ -101,14 +106,6 @@ class TableViewController: MelodeonController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected \(indexPath.item)")
-    }
-
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-
-        let scale = (40 * ((CGFloat(section) + 0.30)/2))
-        let height = super.tableView(tableView, heightForHeaderInSection: section)
-        
-        return height + scale
     }
     
 }

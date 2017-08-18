@@ -8,15 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0818EEC7F6DE01E74DA69884213F1BAF /* MelodeonHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E4C413177B69AD0896B639D3FBC5AB /* MelodeonHeaderCell.swift */; };
-		09D13C7B681535D00A8A74386CEF8F57 /* Pods-Melodeon_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC53405155C064FA62321C30201E6593 /* Pods-Melodeon_Tests-dummy.m */; };
-		10187566A8906F329D2FB6F7FBE81688 /* Melodeon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B14904DDB59C6702D4FD9024C8642945 /* Melodeon-dummy.m */; };
 		17316DB7FAE7A1609621F0E336F5FA64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		2BAE702A735D452DA36A3FF0B9A7A2E6 /* Pods-Melodeon_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B688C060CE26092F2800FD66F782F2EA /* Pods-Melodeon_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D9F7113018753C73C1BE6A10CF19D20 /* Pods-Melodeon_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B35A2412362B7178EBF07C01BB45D091 /* Pods-Melodeon_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		628FC4541088680B55FB46306FBB64E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		ADB15DE0C02019D261EFA25CED001A57 /* MelodeonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DEB0A5634A8164DA03F7B3123884A0 /* MelodeonController.swift */; };
 		BE38B74C3A0C805BD2DD7916E5E492CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		F4AAB1D6B56E65ACBAF2F0C8C990EFCD /* Pods-Melodeon_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 151782ABDD69E6680A2AAFB2B13E0ADB /* Pods-Melodeon_Example-dummy.m */; };
 		FB79CC6899AC0CD9F1CA37AE9A3921D1 /* Melodeon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6856D4814423B27C217AA4948D1DCA1B /* Melodeon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -41,7 +38,6 @@
 		06A33A1B90F5E72D6E7FE6A7ACEB7E37 /* Melodeon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Melodeon.modulemap; sourceTree = "<group>"; };
 		11DCB20B5FD1B7F5379A05C37DC76A48 /* Melodeon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Melodeon.xcconfig; sourceTree = "<group>"; };
 		139B573542DE9F1F8A8FDD9F5E09C8BC /* Pods_Melodeon_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Melodeon_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		151782ABDD69E6680A2AAFB2B13E0ADB /* Pods-Melodeon_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Melodeon_Example-dummy.m"; sourceTree = "<group>"; };
 		256C56C50FAE87E9AC82ED43BA0C1A6E /* Pods-Melodeon_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Melodeon_Tests.modulemap"; sourceTree = "<group>"; };
 		2BF08E43C33A7276E1575DF01F09B993 /* Pods-Melodeon_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Melodeon_Example-frameworks.sh"; sourceTree = "<group>"; };
 		2C8642CF5172BAAE2171BC9BEF92F917 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,14 +56,12 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96011BF1D4A79D86F5B3B4AC452FDE00 /* Pods-Melodeon_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Melodeon_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		A32ADA0AA27B4DE9342781EC628F1FFC /* Pods-Melodeon_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Melodeon_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B14904DDB59C6702D4FD9024C8642945 /* Melodeon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Melodeon-dummy.m"; sourceTree = "<group>"; };
 		B35A2412362B7178EBF07C01BB45D091 /* Pods-Melodeon_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Melodeon_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B688C060CE26092F2800FD66F782F2EA /* Pods-Melodeon_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Melodeon_Example-umbrella.h"; sourceTree = "<group>"; };
 		BCD241F8BD7208152E6D982EEB38B044 /* Pods-Melodeon_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Melodeon_Example.modulemap"; sourceTree = "<group>"; };
 		DB7A7F804F58254D2AE776AB1B89CFE0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFBE4CAAAA18A0FB5717161A3A33029E /* Pods-Melodeon_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Melodeon_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E33A04C6A53F4BAE654D6EA2AE1ABD7F /* Pods-Melodeon_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Melodeon_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EC53405155C064FA62321C30201E6593 /* Pods-Melodeon_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Melodeon_Tests-dummy.m"; sourceTree = "<group>"; };
 		ED574995C3752CA02FD0D400C018E0BA /* Melodeon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Melodeon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5057BFAE93F54F9B70FFE9CAC82F4A8 /* Pods-Melodeon_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Melodeon_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F51B22F672A6DC57B1B8C7458B539CC9 /* Pods-Melodeon_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Melodeon_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -144,7 +138,6 @@
 				BCD241F8BD7208152E6D982EEB38B044 /* Pods-Melodeon_Example.modulemap */,
 				4EB799E41F084D27CD89CA1DF3319FE3 /* Pods-Melodeon_Example-acknowledgements.markdown */,
 				F51B22F672A6DC57B1B8C7458B539CC9 /* Pods-Melodeon_Example-acknowledgements.plist */,
-				151782ABDD69E6680A2AAFB2B13E0ADB /* Pods-Melodeon_Example-dummy.m */,
 				2BF08E43C33A7276E1575DF01F09B993 /* Pods-Melodeon_Example-frameworks.sh */,
 				440EBCBBCF304EDB504ACAC1AB356C7D /* Pods-Melodeon_Example-resources.sh */,
 				B688C060CE26092F2800FD66F782F2EA /* Pods-Melodeon_Example-umbrella.h */,
@@ -183,7 +176,6 @@
 				256C56C50FAE87E9AC82ED43BA0C1A6E /* Pods-Melodeon_Tests.modulemap */,
 				E33A04C6A53F4BAE654D6EA2AE1ABD7F /* Pods-Melodeon_Tests-acknowledgements.markdown */,
 				A32ADA0AA27B4DE9342781EC628F1FFC /* Pods-Melodeon_Tests-acknowledgements.plist */,
-				EC53405155C064FA62321C30201E6593 /* Pods-Melodeon_Tests-dummy.m */,
 				96011BF1D4A79D86F5B3B4AC452FDE00 /* Pods-Melodeon_Tests-frameworks.sh */,
 				43B9CD869DC09870DE4CAE54A15B83C8 /* Pods-Melodeon_Tests-resources.sh */,
 				B35A2412362B7178EBF07C01BB45D091 /* Pods-Melodeon_Tests-umbrella.h */,
@@ -208,7 +200,6 @@
 				39BCE03F3FC424B80710B7B05844683D /* Info.plist */,
 				06A33A1B90F5E72D6E7FE6A7ACEB7E37 /* Melodeon.modulemap */,
 				11DCB20B5FD1B7F5379A05C37DC76A48 /* Melodeon.xcconfig */,
-				B14904DDB59C6702D4FD9024C8642945 /* Melodeon-dummy.m */,
 				3515A67A4AE52E2081FE82AA778FE356 /* Melodeon-prefix.pch */,
 				6856D4814423B27C217AA4948D1DCA1B /* Melodeon-umbrella.h */,
 			);
@@ -348,7 +339,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10187566A8906F329D2FB6F7FBE81688 /* Melodeon-dummy.m in Sources */,
 				ADB15DE0C02019D261EFA25CED001A57 /* MelodeonController.swift in Sources */,
 				0818EEC7F6DE01E74DA69884213F1BAF /* MelodeonHeaderCell.swift in Sources */,
 			);
@@ -358,7 +348,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4AAB1D6B56E65ACBAF2F0C8C990EFCD /* Pods-Melodeon_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +355,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09D13C7B681535D00A8A74386CEF8F57 /* Pods-Melodeon_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

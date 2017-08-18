@@ -13,9 +13,9 @@
 
 [![Twitter: @chaddgrimm](https://img.shields.io/badge/contact-@chaddgrimm-blue.svg?style=flat)](https://twitter.com/chaddgrimm)
 
-A subclass of UITableViewController which behaves like a melodeon.
+A simple subclass of UITableViewController which behaves like a melodeon.
 
-![Screen capture](https://thumbs.gfycat.com/BetterRepulsiveHornedviper-size_restricted.gif)
+![Screen capture](https://gifyu.com/images/melodeon.gif)
 
 ## Usage
 
@@ -64,7 +64,7 @@ You may implement your own header cell as long as it is of type `MelodeonHeaderC
 
 ```swift
   override var headerClasses:[MelodeonHeaderCell.Type]? {
-    return [TableHeaderCell.self]
+    return [TableHeaderCell.self, AnotherHeaderCell.self]
   }
 ```
 
