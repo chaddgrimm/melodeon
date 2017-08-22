@@ -37,6 +37,9 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
                     sectionIsCollapsed["section-\(index)"] = false
                 }
             }
+            OperationQueue.main.addOperation {
+                self.tableView.reloadData()
+            }
         }
     }
 
