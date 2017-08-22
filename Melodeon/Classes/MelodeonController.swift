@@ -28,8 +28,16 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
     }
 
     // Override to provide the section's labels and to get the total number of sections.
-    open var sections:[Any] {
-        return []
+    open var sections:[Any] = [] {
+        didSet {
+            sectionIsCollapsed = [:]
+            for index in 0..<sections.count {
+                sectionIsCollapsed["section-\(index)"] = index != self.initialExpandedSection
+                if let header = tableView(self.tableView, viewForHeaderInSection: index) as? MelodeonHeaderCell, let tapEnabled = self.delegate?.header(header, shouldTapAtSection: index), tapEnabled == false {
+                    sectionIsCollapsed["section-\(index)"] = false
+                }
+            }
+        }
     }
 
     // Override to provide the index of the section you want to be expanded by default.
@@ -50,16 +58,8 @@ open class MelodeonController: UITableViewController, MelodeonDelegate {
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-
         self.delegate = self
         self.registerClasses()
-
-        for index in 0..<sections.count {
-            sectionIsCollapsed["section-\(index)"] = index != self.initialExpandedSection
-            if let header = tableView(self.tableView, viewForHeaderInSection: index) as? MelodeonHeaderCell, let tapEnabled = self.delegate?.header(header, shouldTapAtSection: index), tapEnabled == false {
-                sectionIsCollapsed["section-\(index)"] = false
-            }
-        }
     }
 
     // Override to provide the title of each cells if you're using the default UITableViewCell class.

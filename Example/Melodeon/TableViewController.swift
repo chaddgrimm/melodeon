@@ -24,9 +24,6 @@ class TableViewController: MelodeonController {
                             UIColor(red: 255/255, green: 123/255, blue: 46/255,  alpha: 1.0),
                             UIColor(red: 255/255, green: 36/255,  blue: 39/255,  alpha: 1.0)]
 
-    override var sections:[Any] {
-        return ["List A", "List B", "List C", "List D", "List E", "List F"]
-    }
 
     override var headerClasses:[MelodeonHeaderCell.Type]? {
         return [TableHeaderCell.self, AnotherHeaderCell.self, TableHeaderCell.self, AnotherHeaderCell.self, TableHeaderCell.self, AnotherHeaderCell.self]
@@ -39,6 +36,7 @@ class TableViewController: MelodeonController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.removeTrailingCells = true
+        self.sections = ["List A", "List B", "List C", "List D", "List E", "List F"]
 
     }
 
